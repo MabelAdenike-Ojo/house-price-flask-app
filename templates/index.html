@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 House Price Predictor</h1>
+        <p>Enter the house details below:</p>
+        
+        <form id="predictForm">
+            <label>Size of House (sq ft):
+                <input type="number" id="GrLivArea" placeholder="e.g., 1710" required>
+            </label><br>
+            
+            <label>Number of Bedrooms:
+                <input type="number" id="BedroomAbvGr" placeholder="e.g., 3" required>
+            </label><br>
+            
+            <label>Location:
+                <input type="text" id="Neighborhood" placeholder="e.g., CollgCr" required>
+            </label><br>
+            
+            <button type="submit">Predict</button>
+        </form>
 
+        <h2 id="result"></h2>
+    </div>
+
+    <footer>
+        Mabel Adenike Ojo MSc Bioinformatics student © 2026
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
